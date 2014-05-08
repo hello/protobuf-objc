@@ -20,7 +20,7 @@ This fork contains only ARC version of library.
 
 4.`brew instal protobuf`
 
-5.`git clone git@github.com:Serheo/protobuf-objc.git`
+5.`git clone git@github.com:alexeyxo/protobuf-objc.git`
 
 6.`./build.sh`
 
