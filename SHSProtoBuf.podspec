@@ -36,15 +36,14 @@ Pod::Spec.new do |s|
   s.header_dir = "ProtocolBuffers"
   s.preserve_paths = 'README.md'
   
-  s.requires_arc = false
-  s.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
-  s.source_files = 'src/runtime/Classes/*.{h,m}'  
-
-  s.subspec 'arc' do |spa|
-    spa.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
-    spa.source       = { :git => "https://github.com/Serheo/protobuf-objc.git", :tag => s.version.to_s }
-    spa.source_files =  'src/runtime/Classes/Descriptor*.{h,m}'
-    spa.requires_arc = true  
-  end  
+  s.requires_arc = true  
+  s.source       = { :git => "https://github.com/Serheo/protobuf-objc.git", :tag => s.version.to_s }
+  s.source_files =  'src/runtime/Classes/Descriptor/*.{h,m}'
+    
+  s.subspec 'non-arc' do |sp|
+    sp.requires_arc = false
+    sp.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
+    sp.source_files = 'src/runtime/Classes/*.{h,m}'
+  end
   
 end

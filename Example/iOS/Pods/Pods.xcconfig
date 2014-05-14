@@ -3,4 +3,4 @@ HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/SHSPhoneCompo
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/SHSPhoneComponent" -isystem "${PODS_ROOT}/Headers/SHSProtoBuf" -isystem "${PODS_ROOT}/Headers/SHSProtoBuf/ProtocolBuffers"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}/Pods
-WARNING_CFLAGS = $(inherited) -Wno-missing-prototypes -Wno-format $(inherited) -Wno-missing-prototypes -Wno-format
+WARNING_CFLAGS = $(inherited) -Wno-missing-prototypes -Wno-format
