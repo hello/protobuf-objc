@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.subspec 'arc' do |spa|
     spa.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
     spa.source       = { :git => "https://github.com/Serheo/protobuf-objc.git", :tag => s.version.to_s }
-    spa.source_files =  'src/runtime/ArcClasses/*.{h,m}'
+    spa.source_files =  'src/runtime/Classes/Descriptor*.{h,m}'
     spa.requires_arc = true  
   end  
   
