@@ -15,18 +15,19 @@ Pod::Spec.new do |s|
   
   s.source       = { :git => "https://github.com/Serheo/protobuf-objc.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
-  s.source_files = "src/runtime/Classes/**/*"
   
   s.header_dir = "ProtocolBuffers"
-  s.source_files = 'src/runtime/Classes/*.{h,m}'
   s.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
   s.preserve_paths = 'README.md'
-
-  s.requires_arc = false
+  
+  s.subspec 'no-arc' do |sp|
+    sp.source_files = 'src/runtime/Classes/*.{h,m}'
+    sp.requires_arc = false
+  end
   
   s.subspec 'arc' do |sp|
-    sp.source_files = 'src/runtime/Classes/Descriptor/*.{h,m}'
+    sp.source_files = 'src/runtime/Classes/Descriptor/*'
     sp.requires_arc = true
-  end
+  end  
   
 end
