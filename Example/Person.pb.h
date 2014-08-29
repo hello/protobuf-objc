@@ -105,7 +105,7 @@ BOOL PersonPhoneTypeIsValidValue(PersonPhoneType value);
 + (PersonPhoneNumber*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface PersonPhoneNumberBuilder : PBGeneratedMessage_Builder {
+@interface PersonPhoneNumberBuilder : PBGeneratedMessageBuilder {
 @private
   PersonPhoneNumber* result;
 }
@@ -133,7 +133,7 @@ BOOL PersonPhoneTypeIsValidValue(PersonPhoneType value);
 - (PersonPhoneNumberBuilder*) clearType;
 @end
 
-@interface PersonBuilder : PBGeneratedMessage_Builder {
+@interface PersonBuilder : PBGeneratedMessageBuilder {
 @private
   Person* result;
 }
