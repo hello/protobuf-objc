@@ -217,7 +217,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
 
   void MessageGenerator::DetermineDependencies(set<string>* dependencies) {
     dependencies->insert("@class " + ClassName(descriptor_));
-    dependencies->insert("@class " + ClassName(descriptor_) + "Builder");
+    dependencies->insert("@class " + ClassName(descriptor_) + "_Builder");
 
     for (int i = 0; i < descriptor_->nested_type_count(); i++) {
       MessageGenerator(descriptor_->nested_type(i)).DetermineDependencies(dependencies);
