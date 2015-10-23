@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Serheo/protobuf-objc.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
   
-  s.public_header_files = "ProtocolBuffers.h"
+  s.public_header_files = "SHSProtoBuf/ProtocolBuffers.h"
   s.preserve_paths = 'README.md'
   
   s.requires_arc = true  
